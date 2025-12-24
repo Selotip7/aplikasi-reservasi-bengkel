@@ -43,6 +43,9 @@
     <string name="account_settings">Pengaturan Akun</string>
     <string name="notifications">Notifikasi</string>
     <string name="saved_addresses">Alamat Tersimpan</string>
+<<<<<<< HEAD
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+=======
+>>>>>>> d80c89c608542e211c2212c7fd8ca2be0f1ec575
 </resources>
