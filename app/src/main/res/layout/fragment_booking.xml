@@ -222,13 +222,23 @@
 
             <!-- Selected Services Section -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Layanan Terpilih"
-                android:textSize="16sp"
+                android:text="Pilih Layanan"
                 android:textStyle="bold"
-                android:textColor="@color/gray_900"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/cbServiceRingan"
+                android:text="Servis Ringan (Rp 150.000)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/cbGantiOli"
+                android:text="Ganti Oli (Rp 200.000)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
             <!-- Service Items RecyclerView -->
             <androidx.recyclerview.widget.RecyclerView
@@ -255,20 +265,15 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Total Biaya"
-                        android:textSize="14sp"
-                        android:textColor="@color/gray_900" />
-
-                    <TextView
+                        android:id="@+id/tvTotalPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rp 350.000"
+                        android:text="Rp 0"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@color/blue_600" />
+
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
