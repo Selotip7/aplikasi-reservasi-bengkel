@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Merek Mobil" />
+
+    <EditText
+        android:id="@+id/etModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Model Mobil"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/etYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tahun"
+        android:inputType="number"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/etPlate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Plat Nomor"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnSaveCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan Mobil"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>

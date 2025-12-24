@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Car Workshop</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_booking">Booking</string>
+    <string name="nav_kendaraan">Kendaraan</string>
+    <string name="nav_akun">Akun</string>
+
+    <!-- Home Screen -->
+    <string name="search_hint">Cari layanan servis</string>
+    <string name="service_categories">Layanan Servis</string>
+    <string name="recommended_services">Rekomendasi Servis</string>
+    <string name="booking_now">Booking Servis Sekarang</string>
+
+    <!-- Service Categories -->
+    <string name="oil_change">Ganti Oli</string>
+    <string name="light_service">Servis Ringan</string>
+    <string name="periodic_service">Servis Berkala</string>
+
+    <!-- Booking Screen -->
+    <string name="booking_detail">Detail Booking</string>
+    <string name="user_data">Data Pengguna</string>
+    <string name="vehicle_info">Informasi Kendaraan</string>
+    <string name="selected_services">Layanan Terpilih</string>
+    <string name="total_cost">Total Biaya</string>
+    <string name="notes_optional">Catatan (Opsional)</string>
+    <string name="notes_hint">Tambahkan catatan untuk mekanik...</string>
+    <string name="confirm_booking">Konfirmasi Booking</string>
+
+    <!-- Kendaraan Screen -->
+    <string name="my_vehicles">Kendaraan Saya</string>
+    <string name="add_car">Tambah Mobil</string>
+    <string name="service_history">Riwayat Servis</string>
+    <string name="detail">Detail</string>
+
+    <!-- Account Screen -->
+    <string name="my_account">Akun Saya</string>
+    <string name="contact_info">Informasi Kontak</string>
+    <string name="phone_number">Nomor HP</string>
+    <string name="address">Alamat</string>
+    <string name="account_settings">Pengaturan Akun</string>
+    <string name="notifications">Notifikasi</string>
+    <string name="saved_addresses">Alamat Tersimpan</string>
+</resources>

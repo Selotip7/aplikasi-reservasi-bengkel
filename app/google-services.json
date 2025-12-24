@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "947188232414",
+    "firebase_url": "https://pmob-d4529-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pmob-d4529",
+    "storage_bucket": "pmob-d4529.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947188232414:android:93dc2bb8eabce31ca3124f",
+        "android_client_info": {
+          "package_name": "com.my.projekakhir"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCavwNCb3zNiDDnaHhHFCDbqwmh9I0xGcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
