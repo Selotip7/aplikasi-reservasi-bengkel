@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.my.projekakhir.R
 import com.my.projekakhir.databinding.FragmentAkunBinding
 
 class AkunFragment : Fragment() {
@@ -25,24 +25,36 @@ class AkunFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Profile
+        // PROFILE
         binding.cardProfile.setOnClickListener {
-            Toast.makeText(requireContext(), "Buka Profil", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ProfilFragment())
+                .addToBackStack(null)
+                .commit()
         }
 
-        // Account Settings
+        // PENGATURAN AKUN
         binding.cardSettings.setOnClickListener {
-            Toast.makeText(requireContext(), "Pengaturan Akun", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, PengaturanAkunFragment())
+                .addToBackStack(null)
+                .commit()
         }
 
-        // Notifications
+        // NOTIFIKASI
         binding.cardNotifications.setOnClickListener {
-            Toast.makeText(requireContext(), "Notifikasi", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, NotifikasiFragment())
+                .addToBackStack(null)
+                .commit()
         }
 
-        // Saved Address
+        // ALAMAT TERSIMPAN
         binding.cardAddress.setOnClickListener {
-            Toast.makeText(requireContext(), "Alamat Tersimpan", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, AlamatTersimpanFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 

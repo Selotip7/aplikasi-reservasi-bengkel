@@ -55,6 +55,7 @@ class KendaraanFragment : Fragment() {
             onHistoryClick = {
                 Toast.makeText(requireContext(), "Riwayat ${it.model}", Toast.LENGTH_SHORT).show()
             },
+
             onDetailClick = { car ->
                 val bundle = Bundle().apply {
                     putString("brand", car.brand)
@@ -72,6 +73,8 @@ class KendaraanFragment : Fragment() {
                     .addToBackStack(null)
                     .commit()
             }
+
+
 
         )
 
