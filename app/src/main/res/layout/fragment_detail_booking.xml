@@ -13,37 +13,43 @@
             android:id="@+id/tvNama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama" />
+            android:text="Nama"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvHp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No HP" />
+            android:text="No HP"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvMobil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mobil" />
+            android:text="Mobil"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvPlat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Plat" />
+            android:text="Plat"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvLayanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Layanan" />
+            android:text="Layanan"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tvTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total" />
+            android:text="Total"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etNote"
