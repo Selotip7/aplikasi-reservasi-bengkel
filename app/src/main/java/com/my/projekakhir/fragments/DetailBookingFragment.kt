@@ -6,13 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.google.firebase.database.FirebaseDatabase
 import com.my.projekakhir.MainActivity
 import com.my.projekakhir.databinding.FragmentDetailBookingBinding
 import com.my.projekakhir.models.Booking
+import com.my.projekakhir.viewModel.UserViewModel
+import kotlin.getValue
 
 class DetailBookingFragment : Fragment() {
-
+    private val userViewModel: UserViewModel by activityViewModels()
     private var _binding: FragmentDetailBookingBinding? = null
     private val binding get() = _binding!!
 
@@ -44,7 +47,6 @@ class DetailBookingFragment : Fragment() {
     }
 
     private fun showBookingDetail() {
-        val nama = arguments?.getString("nama") ?: "-"
         val hp = arguments?.getString("hp") ?: "-"
         val mobil = arguments?.getString("mobil") ?: "-"
         val plat = arguments?.getString("plat") ?: "-"
@@ -52,8 +54,14 @@ class DetailBookingFragment : Fragment() {
         val total = arguments?.getInt("total", 0) ?: 0
 
         // Data pengguna
-        binding.tvNama.text = nama
-        binding.tvHp.text = hp
+        userViewModel.nama.observe(viewLifecycleOwner) { nama ->
+            binding.tvNama.text = "Nama : ${nama}"
+        }
+
+        userViewModel.noHp.observe(viewLifecycleOwner) { noHP ->
+            binding.tvHp.text = "No Hp : ${noHP}"
+        }
+
 
         // Data kendaraan
         binding.tvMobil.text = mobil

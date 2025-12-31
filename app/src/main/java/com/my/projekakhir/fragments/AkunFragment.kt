@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.my.projekakhir.R
 import com.my.projekakhir.databinding.FragmentAkunBinding
+import com.my.projekakhir.viewModel.UserViewModel
+import kotlin.getValue
 
 class AkunFragment : Fragment() {
-
+    private val userViewModel: UserViewModel by activityViewModels()
     private var _binding: FragmentAkunBinding? = null
     private val binding get() = _binding!!
 
@@ -24,6 +27,19 @@ class AkunFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        userViewModel.nama.observe(viewLifecycleOwner) { nama ->
+            binding.tvNama.text = nama
+        }
+
+        userViewModel.email.observe(viewLifecycleOwner) { email ->
+            binding.tvEmail.text = email
+        }
+
+        userViewModel.noHp.observe(viewLifecycleOwner) { noHP ->
+            binding.tvNoHp.text = noHP
+        }
 
         // PROFILE
         binding.cardProfile.setOnClickListener {

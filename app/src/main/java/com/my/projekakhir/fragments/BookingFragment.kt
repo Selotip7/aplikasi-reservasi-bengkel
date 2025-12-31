@@ -9,9 +9,13 @@ import androidx.fragment.app.Fragment
 import com.my.projekakhir.MainActivity
 import com.my.projekakhir.R
 import com.my.projekakhir.databinding.FragmentBookingBinding
+import androidx.fragment.app.activityViewModels
+import com.my.projekakhir.viewModel.UserViewModel
+
 
 class BookingFragment : Fragment() {
 
+    private val userViewModel: UserViewModel by activityViewModels()
     private var _binding: FragmentBookingBinding? = null
     private val binding get() = _binding!!
 
@@ -39,6 +43,13 @@ class BookingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        userViewModel.nama.observe(viewLifecycleOwner) { nama ->
+            binding.tvNama.text = nama
+        }
+
+        userViewModel.noHp.observe(viewLifecycleOwner) { noHP ->
+            binding.tvNoHp.text = noHP
+        }
 
         binding.cbServiceRingan.setOnCheckedChangeListener { _, _ ->
             updateTotalPrice()
@@ -56,6 +67,8 @@ class BookingFragment : Fragment() {
             parentFragmentManager.popBackStack()
             (activity as? MainActivity)?.showBottomNav()
         }
+
+
     }
 
 

@@ -40,43 +40,47 @@
             app:layout_constraintEnd_toEndOf="parent">
 
 
-        <LinearLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="16dp">
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@color/white">
+
 
                 <ImageView
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:src="@drawable/ic_user"
                     android:background="@drawable/rounded_blue_light_bg"
                     android:padding="12dp"
+                    android:src="@drawable/ic_user"
                     app:tint="@color/blue_600" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvNama"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Budi Santoso"
+                        android:text=""
+                        android:textColor="@color/gray_900"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/gray_900" />
+                        android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="budisantoso@email.com"
-                        android:textSize="12sp"
+                        android:layout_marginTop="2dp"
+                        android:text=""
                         android:textColor="@color/gray_500"
-                        android:layout_marginTop="2dp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView
@@ -157,9 +161,10 @@
                                 android:textColor="@color/gray_500" />
 
                             <TextView
+                                android:id="@+id/tvNoHp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="+62 812-3456-7890"
+                                android:text=""
                                 android:textSize="13sp"
                                 android:textColor="@color/gray_900" />
                         </LinearLayout>
