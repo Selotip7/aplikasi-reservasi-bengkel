@@ -244,6 +244,34 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"/>
 
+            <CheckBox
+                android:id="@+id/cbServiceBerkala"
+                android:text="Servis Berkala (Rp 100.000)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/cbServiceRem"
+                android:text="Servis Rem (Rp 80.000)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/cbTuneUp"
+                android:text="Tune Up (Rp 120.000)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/cbTambalBan"
+                android:text="Tambal Ban (Rp 50.000)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"/>
+
             <!-- Service Items RecyclerView -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/selected_services_recycler"

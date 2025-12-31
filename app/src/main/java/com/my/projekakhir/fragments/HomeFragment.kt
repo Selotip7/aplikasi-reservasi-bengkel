@@ -1,6 +1,8 @@
 package com.my.projekakhir.fragments
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -96,15 +98,58 @@ class HomeFragment : Fragment() {
         binding.cardServisBerkala.setOnClickListener {
             navigateToBooking("Servis Berkala")
         }
+
+        binding.cardServisRem.setOnClickListener {
+            navigateToBooking("Servis Rem")
+        }
+
+        binding.cardTuneUp.setOnClickListener {
+            navigateToBooking("Tune Up")
+        }
+
+        binding.cardTambalBan.setOnClickListener {
+            navigateToBooking("Tambal Ban")
+        }
     }
 
     private fun setupSearch() {
-        binding.searchService.setOnEditorActionListener { _, _, _ ->
-            val keyword = binding.searchService.text.toString()
-            navigateToBooking(keyword)
-            true
-        }
+
+        binding.searchService.addTextChangedListener(object : TextWatcher {
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+                val keyword = s.toString().lowercase().trim()
+
+                binding.cardGantiOli.visibility =
+                    if (keyword.isEmpty() || keyword.contains("oli") || keyword.contains("ganti"))
+                        View.VISIBLE else View.GONE
+
+                binding.cardServisRingan.visibility =
+                    if (keyword.isEmpty() || keyword.contains("ringan") || keyword.contains("servis"))
+                        View.VISIBLE else View.GONE
+
+                binding.cardServisBerkala.visibility =
+                    if (keyword.isEmpty() || keyword.contains("berkala") || keyword.contains("servis"))
+                        View.VISIBLE else View.GONE
+
+                binding.cardServisRem.visibility =
+                    if (keyword.isEmpty() || keyword.contains("servis") || keyword.contains("rem"))
+                        View.VISIBLE else View.GONE
+
+                binding.cardTuneUp.visibility =
+                    if (keyword.isEmpty() || keyword.contains("tune") || keyword.contains("tune") || keyword.contains("up"))
+                        View.VISIBLE else View.GONE
+
+                binding.cardTambalBan.visibility =
+                    if (keyword.isEmpty() || keyword.contains("tambal") || keyword.contains("ban"))
+                        View.VISIBLE else View.GONE
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun afterTextChanged(s: Editable?) {}
+        })
     }
+
 
     private fun navigateToBooking(serviceName: String?) {
         val fragment = BookingFragment().apply {
