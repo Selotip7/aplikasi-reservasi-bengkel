@@ -7,5 +7,7 @@ data class Booking(
     val plat: String = "",
     val layanan: String = "",
     val total: String = "",
+    val tanggal: String = "",
+    val jam: String = "",
     val catatan: String = ""
 )

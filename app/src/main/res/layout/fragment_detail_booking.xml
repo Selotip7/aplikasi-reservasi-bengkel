@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,65 +10,193 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- Data Pengguna -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Pengguna"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
         <TextView
             android:id="@+id/tvNama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama"
-            android:textColor="@color/black"/>
+            android:text="Nama: -"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
 
         <TextView
-            android:id="@+id/tvHp"
+            android:id="@+id/tvNoHp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No HP"
-            android:textColor="@color/black"/>
+            android:text="No HP: -"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Data Kendaraan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Kendaraan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
 
         <TextView
             android:id="@+id/tvMobil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mobil"
-            android:textColor="@color/black"/>
+            android:text="Mobil: -"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/tvPlat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Plat"
-            android:textColor="@color/black"/>
+            android:text="Plat: -"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Tanggal & Waktu Servis -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jadwal Servis"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal: -"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvJam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jam: -"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Layanan & Total -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Layanan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
 
         <TextView
             android:id="@+id/tvLayanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Layanan"
-            android:textColor="@color/black"/>
+            android:text="Layanan: -"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/tvTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total"
-            android:textColor="@color/black"/>
+            android:text="Total: Rp 0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_600"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Catatan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catatan (Opsional)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
 
         <EditText
             android:id="@+id/etNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Catatan tambahan" />
+            android:minHeight="100dp"
+            android:gravity="top"
+            android:padding="12dp"
+            android:hint="Tambahkan catatan untuk mekanik..."
 
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Buttons -->
         <Button
             android:id="@+id/btnConfirmBooking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Konfirmasi Booking" />
+            android:text="Konfirmasi Booking"
+            android:textSize="16sp"
+            android:backgroundTint="@color/blue_600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
 
         <Button
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kembali" />
+            android:text="Kembali"
+            android:textSize="16sp"
+            android:backgroundTint="@color/gray_400"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 </ScrollView>

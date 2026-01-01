@@ -15,7 +15,8 @@
         android:textColor="@color/black"/>
 
     <TextView
-        android:text="🔔 Servis kendaraan Anda besok pukul 10.00"
+        android:id="@+id/tvNotif"
+        android:text=" "
         android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
